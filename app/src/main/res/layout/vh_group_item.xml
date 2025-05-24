@@ -62,9 +62,8 @@
         style="@style/appChatMuteIconStyle"
         android:contentDescription="@string/mute_icon_description"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@id/img_verified_icon"
         app:layout_constraintStart_toEndOf="@id/img_verified_icon"
-        app:layout_constraintTop_toTopOf="@id/img_verified_icon" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_last_author"

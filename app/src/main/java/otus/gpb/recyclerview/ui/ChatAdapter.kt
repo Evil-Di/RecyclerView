@@ -15,8 +15,7 @@ import otus.gpb.recyclerview.data.PersonChat
 import otus.gpb.recyclerview.databinding.VhGroupItemBinding
 import otus.gpb.recyclerview.databinding.VhPersonItemBinding
 
-class ChatAdapter(private val onItemClick: (Int) -> Unit):
-    ListAdapter<ChatItem, RecyclerView.ViewHolder>(ChatDiffCallback()) {
+class ChatAdapter: ListAdapter<ChatItem, RecyclerView.ViewHolder>(ChatDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
@@ -103,8 +102,6 @@ class ChatAdapter(private val onItemClick: (Int) -> Unit):
 
             binding.imgMentionIconContainer.visibility = if (item.mentioned) View.VISIBLE
             else View.GONE
-
-            binding.root.setOnClickListener { onItemClick(item.id) }
         }
     }
 
@@ -167,8 +164,6 @@ class ChatAdapter(private val onItemClick: (Int) -> Unit):
 
             binding.imgMentionIconContainer.visibility = if (item.mentioned) View.VISIBLE
             else View.GONE
-
-            binding.root.setOnClickListener { onItemClick(item.id) }
         }
     }
 

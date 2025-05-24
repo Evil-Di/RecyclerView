@@ -16,7 +16,8 @@
         <item name="colorChatCounter">@color/color_chat_counter_light</item>
         <item name="colorChatDivider">@color/color_chat_divider_light</item>
         <item name="colorChatOnline">@color/color_chat_online_light</item>
-        <item name="colorChatBackground">@color/color_chat_bacground_light</item>
+        <item name="colorChatBackground">@color/color_chat_background_light</item>
+        <item name="colorChatBackgroundOnSwipe">@color/color_chat_background_on_swipe_light</item>
 
     </style>
 </resources>

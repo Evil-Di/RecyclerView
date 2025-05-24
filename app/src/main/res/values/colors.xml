@@ -13,5 +13,6 @@
     <color name="color_chat_counter_light">#FFC5C9CC</color>
     <color name="color_chat_divider_light">#FFD9D9D9</color>
     <color name="color_chat_online_light">#FF32A8E6</color>
-    <color name="color_chat_bacground_light">#FF51AEE7</color>
+    <color name="color_chat_background_light">#FF51AEE7</color>
+    <color name="color_chat_background_on_swipe_light">#FF66A9E0</color>
 </resources>

@@ -22,4 +22,5 @@
     <string name="read_icon_description">Scam patch</string>
     <string name="unknown_view_type">Unknown view type</string>
     <string name="fab_content_description">FAB description</string>
+    <string name="arch_icon_text">Archive</string>
 </resources>

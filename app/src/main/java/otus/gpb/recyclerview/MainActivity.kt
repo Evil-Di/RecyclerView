@@ -3,6 +3,7 @@ package otus.gpb.recyclerview
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +17,7 @@ import otus.gpb.recyclerview.ui.ChatAdapter
 import otus.gpb.recyclerview.ui.CustomDecorator
 import kotlin.random.Random
 import androidx.recyclerview.widget.RecyclerView.OnScrollListener
+import otus.gpb.recyclerview.ui.ItemTouchHelperCallback
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,12 +38,9 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = ChatAdapter() { id ->
-            println(id)
-        }
+        adapter = ChatAdapter()
 
         binding.recyclerView.adapter = adapter
-        //ItemTouchHelper(ItemTouchHelperCallback()).attachToRecyclerView(binding.recyclerView)
 
         chatItems = generateList()
         adapter.submitList(chatItems)
@@ -60,6 +59,24 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
+
+        val itemTouchCallback = ItemTouchHelperCallback(::getChatItems,::setChatItems).apply {
+            setSwipeEdgeParams(
+                resources.getInteger(R.integer.swipeEdgeCornerRadius),
+                resources.getColor(R.color.color_primary_light),
+                resources.getColor(R.color.color_chat_background_on_swipe_light)
+                )
+            ResourcesCompat.getDrawable(resources, R.drawable.icon_archive, theme)
+                ?.let { setArchIcon(it, 20, 20, 20,
+                    resources.getString(R.string.arch_icon_text)) }
+        }
+        ItemTouchHelper(itemTouchCallback).attachToRecyclerView(binding.recyclerView)
+    }
+
+    private fun getChatItems() = chatItems
+    private fun setChatItems(list: List<ChatItem>) {
+        chatItems = list
+        adapter.submitList(list)
     }
 
     private fun getRandomBool() = Random.nextInt(0, 2) > 0

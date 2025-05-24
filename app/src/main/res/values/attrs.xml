@@ -10,5 +10,6 @@
     <attr format="color" name="colorChatDivider"/>
     <attr format="color" name="colorChatOnline"/>
     <attr format="color" name="colorChatBackground"/>
+    <attr format="color" name="colorChatBackgroundOnSwipe"/>
 
 </resources>
