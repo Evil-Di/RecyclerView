@@ -1,0 +1,90 @@
+package otus.gpb.recyclerview.data
+
+data class GroupChat (
+    override var id: Int,
+    val groupName: String,
+    val lastAuthor: String,
+    val lastMessage: String,
+    val avatarUrl: String,
+    val messagePreviewUrl: String,
+    var voip: Boolean,
+    var verified: Boolean,
+    var muted: Boolean,
+    val time: String,
+    var checked: Boolean,
+    var read: Boolean,
+    var mentioned: Boolean,
+    var pinned: Boolean,
+    var counter: Int
+) : ChatItem
+
+val groupChatList = listOf(
+    GroupChat(
+        id = 1,
+        groupName = "SnejUgal News",
+        lastAuthor = "Nikolay",
+        lastMessage = "F",
+        avatarUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Fishfinger_classic_fried_2.jpg/2560px-Fishfinger_classic_fried_2.jpg",
+        messagePreviewUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Moscow_%288351271825%29.jpg/500px-Moscow_%288351271825%29.jpg",
+        voip = true,
+        verified = false,
+        muted = true,
+        time = "11:38",
+        checked = false,
+        read = false,
+        mentioned = true,
+        pinned = true,
+        counter = 0
+    ),
+    GroupChat(
+        id = 2,
+        groupName = "Unknown",
+        lastAuthor = "",
+        lastMessage = "!Don't swipe me!",
+        avatarUrl = "",
+        messagePreviewUrl = "",
+        voip = true,
+        verified = false,
+        muted = true,
+        time = "11:38",
+        checked = false,
+        read = true,
+        mentioned = true,
+        pinned = false,
+        counter = 0
+    ),
+    GroupChat(
+        id = 3,
+        groupName = "just design",
+        lastAuthor = "You",
+        lastMessage = "I want pizza",
+        avatarUrl = "",
+        messagePreviewUrl = "",
+        voip = false,
+        verified = false,
+        muted = true,
+        time = "11:38",
+        checked = true,
+        read = false,
+        mentioned = false,
+        pinned = false,
+        counter = 0
+    ),
+    GroupChat(
+        id = 4,
+        groupName = "Yes. No",
+        lastAuthor = "Anno",
+        lastMessage = "I see all :))",
+        avatarUrl = "",
+        messagePreviewUrl = "",
+        voip = false,
+        verified = true,
+        muted = false,
+        time = "11:38",
+        checked = true,
+        read = false,
+        mentioned = false,
+        pinned = false,
+        counter = 50
+    )
+)

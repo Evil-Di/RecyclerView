@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="color" name="colorChatFirstLine"/>
+    <attr format="color" name="colorChatSecondLine"/>
+    <attr format="color" name="colorChatThirdLine"/>
+    <attr format="color" name="colorChatService"/>
+    <attr format="color" name="colorChatMention"/>
+    <attr format="color" name="colorChatPinned"/>
+    <attr format="color" name="colorChatCounter"/>
+    <attr format="color" name="colorChatDivider"/>
+    <attr format="color" name="colorChatOnline"/>
+    <attr format="color" name="colorChatBackground"/>
+
+</resources>
